@@ -131,4 +131,11 @@ public class Services implements IServices {
         }
         return null;
     }
+
+
+    public Stagiaire addStagiare(Stagiaire stagiaire){
+        return stagiareRepository.save(stagiaire);
+
+    }
+
 }

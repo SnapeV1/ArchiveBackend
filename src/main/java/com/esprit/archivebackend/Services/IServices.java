@@ -2,6 +2,7 @@ package com.esprit.archivebackend.Services;
 
 
 import com.esprit.archivebackend.DAO.Entities.Attestation;
+import com.esprit.archivebackend.DAO.Entities.Stagiaire;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
@@ -20,5 +21,6 @@ public interface IServices {
     public void updateAttestationImage(long idAtt, MultipartFile attestationImage);
     public String getAttestationImage(long idAtt);
 
+    Stagiaire addStagiare(Stagiaire stagiaire);
 
 }

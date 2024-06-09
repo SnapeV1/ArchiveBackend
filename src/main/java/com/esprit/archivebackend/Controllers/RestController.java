@@ -1,6 +1,7 @@
 package com.esprit.archivebackend.Controllers;
 
 import com.esprit.archivebackend.DAO.Entities.Attestation;
+import com.esprit.archivebackend.DAO.Entities.Stagiaire;
 import com.esprit.archivebackend.Services.IServices;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -60,6 +61,13 @@ public class RestController{
 
 
 
+
+    //Stagiare
+
+    @PostMapping("addStagiare")
+    public Stagiaire addStagiare(@RequestBody Stagiaire stagiaire){
+        return services.addStagiare(stagiaire);
+    }
 
 
 }
