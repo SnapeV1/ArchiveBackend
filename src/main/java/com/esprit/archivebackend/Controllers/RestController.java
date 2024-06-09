@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 
 @org.springframework.web.bind.annotation.RestController
 @AllArgsConstructor
+@CrossOrigin("*")
 public class RestController{
     IServices services;
     @PostMapping("AddAttestation")
@@ -68,6 +70,14 @@ public class RestController{
     public Stagiaire addStagiare(@RequestBody Stagiaire stagiaire){
         return services.addStagiare(stagiaire);
     }
+
+
+    @GetMapping("getStagiares")
+    public List<Stagiaire> GetAllStagiares(){
+        return services.getAllStagiares();
+    }
+
+
 
 
 }
